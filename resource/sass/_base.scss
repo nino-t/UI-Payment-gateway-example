@@ -1,0 +1,103 @@
+* {
+    font-family: $primary-font !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif !important;    
+}
+body {
+    background: $five-color !important;
+}
+label {
+    font-weight: bold !important;
+}
+header {
+    margin-bottom: 0px !important;
+}
+.btn-fixed-bottom{
+    background-color: $four-color;
+    padding: 16px 14px;
+}
+.form-section {
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+.btn-ss-primary{
+    border-radius: 4px;
+    background-color: $primary-color;
+    box-shadow: 0 2px 4px 0 rgba(140, 140, 140, 0.1);
+    color: $five-color;
+    padding: 12px auto;
+
+    &:hover{
+        background-color: $secondary-color;
+    }
+}
+a {
+    color: $primary-color;
+    &:hover{
+        color: $secondary-color;
+    }    
+}
+.label{
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+    color: $label-color;
+}
+.amount{
+    font-size: 14px !important;
+    padding-top: 7px;
+}
+#page-guide{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    background-color: $five-color;
+    top: 0;
+    left: 0;
+
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;    
+
+    header {
+        .navbar a {
+            color: #0c0c0c;
+        }   
+        .container {
+            display: flex;
+            justify-content: center;    
+        }
+        .navbar-brand {
+            margin: 0;
+        }
+    }
+
+    .content {
+        margin-bottom: 100px;        
+    }
+}
+.back-nav{
+    position: absolute;
+    cursor: pointer;
+}
+.btn-fixed-bottom{
+    box-shadow: 0 2px 4px 0 rgba(140, 140, 140, 0.8);
+}
+.navbar-relative{
+    position: relative;
+}
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    text-align: center;
+}
+.bg-white{
+    background-color: $white;
+}
+.border-bottom {
+    border-bottom: 1px solid $five-color;
+}

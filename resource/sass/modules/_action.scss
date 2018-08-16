@@ -1,0 +1,25 @@
+.act-left {
+    width: 80%;
+    float: left;
+    display: flex;
+
+    p {
+        margin-top: 5px;
+    }
+}
+
+.act-right {
+    width: 20%;
+    float: left;
+
+    span {
+        float: right;
+        margin-top: 5px;
+        color: #ecf0f1;
+        margin-right: 5px;    
+    }
+
+    img {
+        float: right;
+    }
+}

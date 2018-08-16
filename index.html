@@ -1,0 +1,265 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"/>        
+        <title>Kanepay Dev</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900"
+            rel="stylesheet"/>
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+            integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+            crossorigin="anonymous"/>
+        <link rel="stylesheet"
+            href="http://localhost:4035/assets/css/main.css?${data.app.assetsVersion}"
+            crossorigin="anonymous"/>
+        <link href="http://localhost:4035/assets/icons/open-iconic/font/css/open-iconic-bootstrap.css"
+            rel="stylesheet" crossorigin="anonymous"/>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.0/sweetalert2.min.css"
+            integrity="sha256-afD4zUG7bjeJUrG5qU8qVDSksV1A+5zzB/KHajQoSRU="
+            crossorigin="anonymous"/>
+        <link rel="stylesheet"
+            href="./public/css/style.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a tabindex="-1" class="navbar-brand" href="#">
+                        <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/6487308D-1549-4860-93F4-793FA487D33A.png" height="35" />
+                    </a>
+                </div>
+            </nav>                
+        </header>
+        <main>
+            <section id="payments">
+                <div class="container">
+                    <form id="paymentMethods" method="post" style="margin-top: 0.5rem;" action="">
+                        <div id="summary" class="row price">
+                            <div class="col text-right"> 
+                                <div class="knp-box">
+                                    <div>
+                                        <div class="label">Produk</div>
+                                        <div class="amount" id="item">Baju Baru</div>
+                                    </div>
+                                    <div>
+                                        <div class="label">Harga</div>
+                                        <div class="amount" id="price">Rp 50.000,00</div>
+                                    </div>
+                                    <div>
+                                        <div class="label">Promo</div>
+                                        <div class="amount" id="disc">Rp 0,00</div>
+                                    </div>
+                                    <div>
+                                        <div class="label">Biaya Admin</div>
+                                        <div class="amount" id="fee">Rp 3.000,00</div>
+                                    </div>
+                                    <div class="knp-foot-box">
+                                        <div class="price-amount">
+                                            <div class="label">Total</div>
+                                            <div class="amount" id="amount">Rp 53.000,00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="group">Choose Payment Method</label>
+                            <div class="knp-box-group">
+                                <div class="knp-box item py-method" data-token="123">
+                                    <div class="knp-box-body">
+                                        <div class="knp-box-title">
+                                            <b>Bank Transfer</b>
+                                        </div>
+                                        <div class="knp-box-content">
+                                            <div class="act-left">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/D67ABA8C-BF04-4361-91F1-199E9624A808.png" height="38" />
+                                                <p>Doku wallet</p>
+                                            </div>
+                                            <div class="act-right">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/998C4941-AB64-43DC-957E-2DEFFCC1B2D2.png" width="30" />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="knp-box item py-method" data-token="123">
+                                    <div class="knp-box-body">
+                                        <div class="knp-box-title">
+                                            <b>Virtual Account</b>
+                                        </div>
+                                        <div class="knp-box-content">
+                                            <div class="act-left">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/5AB5F7A6-7688-4671-95DA-1C3E402AEB43.png" height="38" />
+                                                <p>BCA Virtual Account</p>
+                                            </div>
+                                            <div class="act-right">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/998C4941-AB64-43DC-957E-2DEFFCC1B2D2.png" width="30" />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="knp-box item py-method" data-token="123">
+                                    <div class="knp-box-body">
+                                        <div class="knp-box-title">
+                                            <b>ATM Bersama</b>
+                                        </div>
+                                        <div class="knp-box-content">
+                                            <div class="act-left">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/27A76750-5095-4893-AA06-89C13B92D2AE.png" height="38" />
+                                                <p>ATM Bersama</p>
+                                            </div>
+                                            <div class="act-right">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/998C4941-AB64-43DC-957E-2DEFFCC1B2D2.png" width="30" />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="knp-box item py-method" data-token="123">
+                                    <div class="knp-box-body">
+                                        <div class="knp-box-title">
+                                            <b>Kartu Kredit</b>
+                                        </div>
+                                        <div class="knp-box-content">
+                                            <div class="act-left">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/728B3CD2-2D68-4987-8F66-BC594B0FD2F7.png" height="38" />
+                                                <p>Blibli.com</p>
+                                            </div>
+                                            <div class="act-right">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/998C4941-AB64-43DC-957E-2DEFFCC1B2D2.png" width="30" />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>                                            
+                                <div class="knp-box item py-method" data-token="123">
+                                    <div class="knp-box-body">
+                                        <div class="knp-box-title">
+                                            <b>Merchant</b>
+                                        </div>
+                                        <div class="knp-box-content">
+                                            <div class="act-left">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/1966939D-12FD-4D65-861A-624D4B837743.png" height="38" />
+                                                <p>Indomaret</p>
+                                            </div>
+                                            <div class="act-right">
+                                                <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/998C4941-AB64-43DC-957E-2DEFFCC1B2D2.png" width="30" />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>                                                
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div class="btn-fixed-bottom">
+                            <button id="submit-btn" 
+                                class="btn btn-lg btn-block btn-ss-primary"
+                                type="submit"
+                                role="button">
+                                Bayar Sekarang
+                            </button>
+                        </div>
+                    
+                    </form>
+                </div>
+            </section>
+            
+            <section id="page-guide">
+                <header style="margin-bottom:20px !important;">
+                    <nav class="navbar">
+                        <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/36691869-B27C-4854-94C9-3F3581FF0C67.png" width="35" class="back-nav" />
+                        <div class="container">
+                            <a tabindex="-1" class="navbar-brand" href="#">
+                                Payment
+                            </a>
+                        </div>
+                    </nav>
+                </header>     
+                
+                <div class="content">
+                    <div class="container">
+                        <div class="knp-box">
+                            <div class="knp-box-body big-box">
+                                <div class="price-amount primary">
+                                    <div class="label">Payment details</div>
+                                    <div class="amount" id="amount">Rp 400.619</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="page-ground">
+                        <div class="ground-heading container">
+                            <h3 class="ground-title">BCA Virtual Account</h3>
+                            <img src="https://cdn.zeplin.io/5b500e007783e20fbb03e5e9/assets/D67ABA8C-BF04-4361-91F1-199E9624A808.png" height="38" />
+                        </div>
+                        <div class="ground-body">
+                            <div class="page-guide-part container">
+                            <p>Periksa kembali data pembayaran Anda sebelum melanjutkan transaksi.</p>
+                            <p>Anda akan mendapatkan pembayaran BCA Virtual Account yang akan di gunakan untuk membayar transaksi ini di berbagai channel pembayaran BCA.</p>
+                            </div>
+                            <div class="page-guide-body container">
+                            <h3 class="guide-title">Pentujuk Pembayaran</h3>
+                            <ul class="guide-list">
+                                <li class="guide-list-item"><p>Pentujuk Pembayaran</p></li>
+                                <li class="guide-list-item"><p>Pilih Doku Wallet</p></li>
+                                <li class="guide-list-item"><p>Masukkan Kode Pembayaran Anda lalu tekan Benar</p></li>
+                                <li class="guide-list-item"><p>Kode Pembayaran Kanepay adalah 3003</p></li>
+                                <li class="guide-list-item"><p>Masukkan harga total yang harus di bayar</p></li>
+                                <li class="guide-list-item"><p>Detail pembayaran akan tampil di halaman konfirmasi pembayaran. Tekan Ya jika detail  pembayaran benar</p></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-fixed-bottom">
+                    <button id="submit-btn" 
+                        class="btn btn-lg btn-block btn-ss-primary"
+                        type="button" 
+                        role="button">
+                            Continue
+                    </button>
+                </div>                
+            </section>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.0/sweetalert2.min.js"
+            integrity="sha256-ROiglgXNGb9xqke1ldLIUSu+ULUkcZ8xNh2Enqsuxw0="
+            crossorigin="anonymous"></script>
+        <script src="http://localhost:4035/assets/js/app.webcheckout.js?${data.app.assetsVersion}"></script>
+        <script>
+            $(function() {
+                $('.py-method').click(function(){
+                    var token =  $(this).data('token');
+                    $('#paymentMethodToken').val(token);
+
+                    $('#page-guide').css("height", "100%");
+                    $('#page-guide').css("overflow-y", "scroll");
+                    $('#payments').css("display", "none");
+                    $('#page-guide .btn-fixed-bottom').css("display", "block");
+                });
+
+                $('.back-nav').click(function(){
+                    $('#page-guide').css("height", "0%");
+                    $('#page-guide').css("overflow-y", "hidden");
+                    $('#payments').css("display", "block");
+                    $('#page-guide .btn-fixed-bottom').css("display", "none");
+                });
+            });
+        </script>
+    </body>
+</html>

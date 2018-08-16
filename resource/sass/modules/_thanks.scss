@@ -1,0 +1,23 @@
+.thanks {
+    .thank-item {
+        padding: 20px 0;
+        .thank-item-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 40px;
+        }
+
+        p {
+            color: $label-color;
+        }
+        b {
+            color: $black;
+        }
+        h3{
+            font-weight: bold;
+        }
+    }
+}

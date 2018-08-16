@@ -1,0 +1,21 @@
+.knp-flex {
+    padding: 15px 0;
+    display: flex;
+
+    > .flex-item-auto {
+        flex: 1;
+    }
+
+    &.direction-column {
+        flex-direction: column;
+    }
+    &.justify-content-center{
+        justify-content: center;
+    }
+    &.align-items-center{
+        align-items: center;
+    }
+    &.border-bottom {
+        border-bottom: 1px solid $five-color;
+    }
+}

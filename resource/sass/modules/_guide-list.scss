@@ -1,0 +1,56 @@
+.guide-list {
+    position: relative;
+    font-size: 1.03em;
+    margin-left: 20px;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+
+    .guide-list-item {
+        position: relative;
+        padding-left: 15px;
+        border-left: 2px solid $secondary-color;
+        padding-bottom: 10px;
+
+        > p {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: -6px;      
+        }
+        &:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;        
+        }
+        &:before, &:after{
+            position: absolute;
+            display: block;
+            top: 0;        
+        }
+
+        &:bofore {
+            left: -217.5px;
+            color: rgba(255, 255, 255, 0.4);
+            content: "";
+            text-align: right;
+            font-weight: 100;
+            font-size: 0.9em;
+            min-width: 120px;        
+        }
+        &:after {
+            box-shadow: 0 0 0 2px #f9bc2b;
+            left: -3.86px;
+            background: #ffffff;
+            border-radius: 50%;
+            height: 5px;
+            width: 5px;
+            content: "";
+            top: 0;        
+        }
+        &:last-of-type:after {
+            left: -2px;
+        }
+      }
+    
+}

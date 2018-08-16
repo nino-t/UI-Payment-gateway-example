@@ -1,0 +1,45 @@
+.page-ground {
+    background-color: $four-color;
+    margin-top: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .ground-heading {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .ground-title{
+            margin: 0;
+            font-size: 15px;
+            font-weight: bold;
+        }    
+    }
+    .ground-body {
+        color: $font-color;
+        font-size: 13.5px;
+
+        .page-guide-body, .page-guide-part{
+            border-top: solid 1px $five-color;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .page-guide-body {
+            .guide-title{
+                font-size: 15px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: $black;
+            }
+            .guide-list {
+                margin-top: 15px;
+            }
+        }        
+    }    
+}
