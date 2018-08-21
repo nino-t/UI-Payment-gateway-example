@@ -46,8 +46,8 @@
                     <div class="container">
                         <div class="thank-item-content">
                             <p>Lakukan Pembayaran dalam Waktu</p>
-                            <h3>47 : 59 : 07</h3>
-                            <p>Sebelum <b>Kamis, 16 Juli 2018, 16:40 WIB</b></p>
+                            <h3 id="pay-timer">48:00:00</h3>
+                            <p>Sebelum <b>Kamis, 23 Agustus 2018, 16:40 WIB</b></p>
                         </div>
                     </div>            
                 </div>    
@@ -101,5 +101,43 @@
             integrity="sha256-ROiglgXNGb9xqke1ldLIUSu+ULUkcZ8xNh2Enqsuxw0="
             crossorigin="anonymous"></script>
         <script src="http://localhost:4035/assets/js/app.webcheckout.js?${data.app.assetsVersion}"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                if(localStorage.getItem("expire-1") !== null){
+                    var finish = localStorage.getItem('expire-1');
+                }else{
+                    var finish = new Date("August 22, 2018 00:00:00").getTime();
+                    localStorage.setItem('expire-1', finish);
+                }
+
+                var x = setInterval(function() {
+                    var now = new Date().getTime();
+                    var distance = finish - now;
+
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24) * 24);
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) + days);
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);                    
+
+                    if(hours < 10) {
+                        hours = '0'+ hours;
+                    }
+
+                    if(minutes < 10) {
+                        minutes = '0'+ minutes;
+                    }                    
+
+                    if(seconds < 10) {
+                        seconds = '0'+ seconds;
+                    }                                        
+                    $('#pay-timer').html(hours + ':'+ minutes +':'+ seconds);
+
+                    if (distance < 0) {
+                        clearInterval(x);
+                        localStorage.removeItem('expire-1');
+                    }
+                }, 1000);
+            });
+        </script>
     </body>
 </html>
